@@ -9,7 +9,6 @@ pipeline {
             {
                 runMATLABTests(
                                testResultsPDF: 'myresult/result.pdf'
-                               testResultsTAP: 'tapResults/tapReport.tap'
                                testResultsJUnit: 'junitResults/junit.xml'
                                codeCoverageCobertura: 'codeCoverage/codeCoverage.xml'
                                testResultsSimulinkTest: 'simulinkTests/stmReport.mldatx'
