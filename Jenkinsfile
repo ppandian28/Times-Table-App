@@ -7,13 +7,7 @@ pipeline {
         stage('Run Tests') {
             steps
             {
-                runMATLABTests(
-                               testResultsPDF: 'myresult/result.pdf'
-                               testResultsJUnit: 'junitResults/junit.xml'
-                               codeCoverageCobertura: 'codeCoverage/codeCoverage.xml'
-                               testResultsSimulinkTest: 'simulinkTests/stmReport.mldatx'
-                               modelCoverageCobertura: 'modelCoverage/modelCoverage.xml'
-                              )         
+                runMATLABTests( )         
             }       
         }                
     }
