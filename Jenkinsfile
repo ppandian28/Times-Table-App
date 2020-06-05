@@ -7,7 +7,7 @@ pipeline {
         stage('Run Tests') {
             steps
             {
-                runMATLABTests(testResultsPDF:'myresult/result.pdf',
+                runMATLABTests(testResultsPDF,
                                testResultsJUnit: 'junitResults/junit.xml')         
             }       
         }                
