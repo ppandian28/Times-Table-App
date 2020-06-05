@@ -7,7 +7,7 @@ pipeline {
         stage('Run Tests') {
             steps
             {
-                runMATLABTests()         
+                runMATLABTests         
             }       
         }                
     }
