@@ -8,8 +8,8 @@ pipeline {
         stage('Run MATLAB Command') {
             steps
             {
-              // runMATLABCommand 'disp("Hello World.")'
-                runMATLABCommand 'ver'
+               runMATLABCommand 'disp("Hello World.")'
+              //  runMATLABCommand 'ver'
             }       
         }                
     } 
