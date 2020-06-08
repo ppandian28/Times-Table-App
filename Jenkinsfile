@@ -1,5 +1,5 @@
 node {
         env.PATH="/usr/local/MATLAB/R2019a/bin:${env.PATH}"
-        runMATLABCommand 'pwd'
+        runMATLABCommand 'disp("Hello World!")'
 }
  
