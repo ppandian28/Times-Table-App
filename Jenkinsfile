@@ -1,8 +1,8 @@
 pipeline {
     agent any
-     //environment {
-     //   PATH = "${PATH};/usr/local/MATLAB/R2019b/bin"
-    //}
+    environment {
+        PATH = "/usr/local/MATLAB/R2019a/bin;${PATH}"
+    }
     stages{
         stage('Run Tests') {
             steps
