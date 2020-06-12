@@ -5,7 +5,7 @@ pipeline {
             matrix {
                 agent any
                 environment {
-                    "C:\\Program Files\\MATLAB\\${VERSION}\\bin;${PATH}"   // Windows agent
+                    PATH = "C:\\Program Files\\MATLAB\\${VERSION}\\bin;${PATH}"   // Windows agent
                     }
                     axes {
                         axis {
