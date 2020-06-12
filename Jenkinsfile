@@ -5,8 +5,7 @@ pipeline {
                     matrix {
                                     agent any
                                     environment {
-         
-                                                 PATH = "${PATH}:/usr/local/MATLAB/${VERSION}/bin"                               
+                                    
                                         PATH = "C:\\Program Files\\MATLAB\\${VERSION}\\bin;${PATH}" 
                                      }
                                    axes {
