@@ -10,11 +10,11 @@ pipeline {
                 runMATLABTests(codeCoverageCobertura: 'code-coverage/coverage.xml')
             }       
         } 
-        stage('Publish to Codecov') {
-            steps
-            {
-                curl -s https://codecov.io/bash | bash
-            }       
-        }     
+        //stage('Publish to Codecov') {
+        //    steps
+        //    {
+        //        curl -s https://codecov.io/bash | bash
+        //    }       
+        // }     
     } 
 }
