@@ -10,7 +10,7 @@ pipeline {
         stage('Run MATLAB Command') {
             steps
             {
-               runMATLABCommand "disp('Hello World!'),matlabroot"
+               runMATLABCommand "matlabroot"
             }       
         }                
     } 
