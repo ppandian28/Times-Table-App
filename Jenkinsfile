@@ -13,7 +13,7 @@ pipeline {
         stage('Publish to Codecov') {
             steps
             {
-                curl -s https://codecov.io/bash | bash
+                bat('curl -s https://codecov.io/bash | bash')
             }       
          }     
     } 
