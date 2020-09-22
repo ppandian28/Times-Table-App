@@ -7,13 +7,13 @@ pipeline {
         stage('Run MATLAB Tests') {
             steps
             {
-                runMATLABTests(codeCoverageCobertura: 'code-coverage/coverage.xml')
+                runMATLABTests(codeCoverageCobertura: 'coverage.xml')
             }       
         } 
         stage('Publish to Codecov') {
             steps
             {
-                bat('curl -s https://codecov.io/bash | bash -f "code-coverage/coverage.xml"')
+                bat('curl -s https://codecov.io/bash | bash -f "coverage.xml"')
             }       
          }     
     } 
