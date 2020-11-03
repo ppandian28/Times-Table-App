@@ -28,7 +28,7 @@ pipeline {
                 axes {
                     axis {
                         name 'MATLAB_VERSION'
-                        values 'R2019b', 'R2020a'
+                        values 'R2020b', 'R2020a'
                     }
                 }
                 tools{
