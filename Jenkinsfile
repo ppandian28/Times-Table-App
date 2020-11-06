@@ -1,14 +1,7 @@
-pipeline {
-   agent any
-   tools {
-       matlab 'R2020b'
-   }
-    stages{
-        stage('Run MATLAB Command') {
-            steps
-            {
-               runMATLABCommand 'matlabroot'
-            }       
-        }                
-    } 
+node {  
+    def matlabroot
+    matlabroot = tool 'R2020b'  
+    withEnv(["PATH + MATLAB = $matlabroot/bin"]) {
+        runMATLABCommand 'matlabroot' 
+    }
 }
