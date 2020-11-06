@@ -7,7 +7,7 @@ pipeline {
         stage('Run MATLAB Command') {
             steps
             {
-               runMATLABCommand 'myscript'
+               runMATLABCommand 'matlabroot'
             }       
         }                
     } 
