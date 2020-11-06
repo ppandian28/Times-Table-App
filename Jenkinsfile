@@ -1,7 +1,7 @@
 node {  
     def matlabroot
     matlabroot = tool 'R2020a'  
-    withEnv(["PATH + MATLAB = $matlabroot/bin"]) {
-        runMATLABCommand 'pwd,ver,matlabroot' 
+    withEnv(["PATH+MATLAB = $matlabroot/bin"]) {
+        runMATLABCommand 'pwd,ver' 
     }
 }
