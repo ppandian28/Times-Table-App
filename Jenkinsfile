@@ -9,7 +9,7 @@ node {
         }else{
             matlabver = matlabver + "\\bin"   // Windows agent
         }   
-        withEnv(["PATH + MATLAB = $matlabver"]) {   // Prepend matlabroot/bin folder to the PATH variable
+        withEnv(["PATH + MATLAB = $matlabver"]) {   // Prepend matlabroot/bin to the PATH variable
             runMATLABCommand 'pwd,matlabroot'
         }
     }
