@@ -5,5 +5,6 @@ node {
     withEnv(["PATH+MATLAB = $matlabroot/bin"]) {
         runMATLABCommand 'pwd,matlabroot' 
         echo PATH
+        echo matlabroot
     }
 }
