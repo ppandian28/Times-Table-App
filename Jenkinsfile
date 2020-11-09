@@ -1,10 +1,17 @@
 // Scripted Pipeline
-node {  
-    def matlabroot
-    matlabroot = tool 'R2020a'
-    withEnv(["PATH+MATLAB = $matlabroot\\bin"]) {
-        runMATLABCommand 'pwd,matlabroot' 
-        echo PATH
-        echo matlabroot
+node {
+    def matlabver
+    stage('Run MATLAB Command') {
+        // Set matlabroot
+        matlabver = tool 'R2020a'
+        if (isUnix()){
+            matlabver = matlabver + "/bin"
+        }else{
+            matlabver = matlabver + "\\bin"
+        }   
+        // Add matlabroot to PATH variable
+        withEnv(["PATH + MATLAB = $matlabver"]) {
+            runMATLABCommand 'pwd,matlabroot'
+        }
     }
 }
