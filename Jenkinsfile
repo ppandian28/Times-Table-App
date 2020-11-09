@@ -2,15 +2,14 @@
 node {
     def matlabver
     stage('Run MATLAB Command') {
-        // Set matlabroot
-        matlabver = tool 'R2020a'
+        // Specify the matlabroot/bin folder for the desired MATLAB version
+        matlabver = tool 'R2020b'
         if (isUnix()){
-            matlabver = matlabver + "/bin"
+            matlabver = matlabver + "/bin"   // Linux or macOS agent
         }else{
-            matlabver = matlabver + "\\bin"
+            matlabver = matlabver + "\\bin"   // Windows agent
         }   
-        // Add matlabroot to PATH variable
-        withEnv(["PATH + MATLAB = $matlabver"]) {
+        withEnv(["PATH + MATLAB = $matlabver"]) {   // Prepend matlabroot/bin folder to the PATH variable
             runMATLABCommand 'pwd,matlabroot'
         }
     }
