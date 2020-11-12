@@ -16,12 +16,12 @@ classdef tNewTimesTable < matlab.unittest.TestCase
     methods(Test)        
         function verifyCanChangeTimesTable(testCase)
             currentTable = testCase.gameObject.CurrentTimesTable;
-            newTable = 7;            
+            newTable = 0;            
             testCase.assertNotEqual(currentTable, newTable);
             
             % Times table expects a string for the currentTimesTable
             testCase.gameObject.setNewTimesTable(num2str(newTable));
-            testCase.assertFail(testCase.gameObject.CurrentTimesTable, newTable);            
+            testCase.verifyTrue(testCase.gameObject.CurrentTimesTable, newTable);            
         end
     end
     
