@@ -27,11 +27,11 @@ classdef tAnswerIsCorrect < matlab.unittest.TestCase
             correctAnswer = testCase.gameObject.CurrentTimesTable * testCase.gameObject.CurrentQuestion;
             inCorrectAnswer = correctAnswer + 100;
             inCorrectAnswer = num2str(inCorrectAnswer);
-            testCase.verifyFalse(testCase.gameObject.isAnswerCorrect(inCorrectAnswer));
+            testCase.verifyTrue(testCase.gameObject.isAnswerCorrect(inCorrectAnswer));
         end
         
         function verifyEmptyAnswer(testCase)
-            testCase.verifyFalse( testCase.gameObject.isAnswerCorrect("") );
+            testCase.verifyTrue( testCase.gameObject.isAnswerCorrect("") );
         end
         
         function verifyNonNumericAnswer(testCase)
