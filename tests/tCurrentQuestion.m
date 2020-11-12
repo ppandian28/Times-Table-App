@@ -20,8 +20,8 @@ classdef tCurrentQuestion < matlab.unittest.TestCase
                 % Set a new question:
                 testCase.gameObject.setNewQuestion;
                 % Confirm within expected range:
-                testCase.verifyGreaterThanOrEqual( testCase.gameObject.CurrentQuestion, 11);
-                testCase.verifyLessThanOrEqual( testCase.gameObject.CurrentQuestion, 121);
+                testCase.verifyGreaterThanOrEqual( testCase.gameObject.CurrentQuestion, 1);
+                testCase.verifyLessThanOrEqual( testCase.gameObject.CurrentQuestion, 12);
             end
         end
     end
