@@ -21,7 +21,7 @@ classdef tNewTimesTable < matlab.unittest.TestCase
             
             % Times table expects a string for the currentTimesTable
             testCase.gameObject.setNewTimesTable(num2str(newTable));
-            testCase.verifyEqual(testCase.gameObject.CurrentTimesTable, newTable);            
+            testCase.assertFail(testCase.gameObject.CurrentTimesTable, newTable);            
         end
     end
     
