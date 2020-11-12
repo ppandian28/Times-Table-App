@@ -31,11 +31,11 @@ classdef tAnswerIsCorrect < matlab.unittest.TestCase
         end
         
         function verifyEmptyAnswer(testCase)
-            testCase.verifyFalse( testCase.gameObject.isAnswerCorrect("") );
+            testCase.verifyTrue( testCase.gameObject.isAnswerCorrect("") );
         end
         
         function verifyNonNumericAnswer(testCase)
-            testCase.verifyFalse( testCase.gameObject.isAnswerCorrect("abc") );
+            testCase.verifyTrue( testCase.gameObject.isAnswerCorrect("abc") );
         end
     end
     
